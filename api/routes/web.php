@@ -16,3 +16,7 @@ $router->get('/', function () use ($router) {
 });
 
 $router->get('/tasks', 'TasksController@show');
+
+$router->get('/{route:.*}/', function ()  {
+    return view('app');
+});
