@@ -21,4 +21,14 @@ class TasksController extends Controller
         return Task::all();
     }
 
+    public function store()
+    {
+        //
+    }
+
+    public function destroy(Task $task)
+    {
+        //
+    }
+
 }
