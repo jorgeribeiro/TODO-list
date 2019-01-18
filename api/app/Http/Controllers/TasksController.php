@@ -18,7 +18,7 @@ class TasksController extends Controller
 
     public function show()
     {
-        return Task::all();
+        // return Task::all();
     }
 
     public function store()
