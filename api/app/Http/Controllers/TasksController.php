@@ -18,6 +18,7 @@ class TasksController extends Controller
 
     public function show()
     {
+        return response()->json(Task::all());
         // return Task::all();
     }
 
