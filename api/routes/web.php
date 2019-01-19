@@ -16,5 +16,6 @@ $router->get('/', function () use ($router) {
 });
 
 $router->get('/tasks', 'TasksController@show');
+$router->get('/tasks/{id}', 'TasksController@showOne');
 $router->post('/task', 'TasksController@store');
 $router->delete('/task/{task}', 'TasksController@destroy');
