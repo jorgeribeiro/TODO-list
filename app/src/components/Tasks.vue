@@ -7,8 +7,8 @@
     </p>
     <ul>
       <li v-for="task in tasks" :key="task.id">
-        {{ task.titulo }}
-        {{ task.descricao }}
+        {{ task.title }}
+        {{ task.description }}
       </li>
     </ul>
   </div>

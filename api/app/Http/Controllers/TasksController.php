@@ -18,7 +18,7 @@ class TasksController extends Controller
 
     public function show()
     {
-        return Task::findOrFail(1);
+        return Task::all();
     }
 
     public function showOne($id)
