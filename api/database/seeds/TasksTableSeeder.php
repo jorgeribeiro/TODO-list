@@ -13,8 +13,8 @@ class TasksTableSeeder extends Seeder
     public function run()
     {
         DB::table('tasks')->insert([
-            'titulo' => str_random(10),
-            'descricao' => str_random(30)
+            'title' => str_random(10),
+            'description' => str_random(30)
         ]);
     }
 }
