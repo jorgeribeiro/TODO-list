@@ -25,7 +25,7 @@ export default {
   },
 
   methods: {
-    init() {
+    loadTasks() {
       axios
       .get('http://localhost:8000/tasks')
       .then(response => (this.tasks = response.data));
@@ -33,7 +33,7 @@ export default {
   },
 
   mounted() {
-    this.init();
+    this.loadTasks();
   }
 }
 </script>
