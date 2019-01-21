@@ -7,8 +7,7 @@
     </p>
     <ul>
       <li v-for="task in tasks" :key="task.id">
-        {{ task.title }}
-        {{ task.description }}
+        {{ task.title }} - {{ task.description }}
       </li>
     </ul>
   </div>
@@ -18,18 +17,23 @@
 import axios from 'axios'
 
 export default {
-  name: 'Tasks',
-
   data() {
     return {
-      tasks: {}
+      tasks: null
+    }
+  },
+
+  methods: {
+    init() {
+      axios
+      .get('http://localhost:8000/tasks')
+      .then(response => (this.tasks = response));
     }
   },
 
   mounted() {
-    axios
-      .get('http://localhost:8000/tasks')
-      .then(response => (this.tasks = response))
+    this.init();
+    console.log(this.tasks == null);
   }
 }
 </script>
