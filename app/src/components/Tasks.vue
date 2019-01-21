@@ -17,9 +17,10 @@
 import axios from 'axios'
 
 export default {
+  name: 'tasks',
   data() {
     return {
-      tasks: null
+      tasks: []
     }
   },
 
@@ -27,13 +28,12 @@ export default {
     init() {
       axios
       .get('http://localhost:8000/tasks')
-      .then(response => (this.tasks = response));
+      .then(response => (this.tasks = response.data));
     }
   },
 
   mounted() {
     this.init();
-    console.log(this.tasks == null);
   }
 }
 </script>
