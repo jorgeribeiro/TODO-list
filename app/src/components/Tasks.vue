@@ -5,8 +5,8 @@
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
-    <ul>
-      <li v-for="task in tasks" :key="task.id">
+    <ul v-for="task in tasks" :key="task.id">
+      <li>
         {{ task.title }} - {{ task.description }}
       </li>
     </ul>
