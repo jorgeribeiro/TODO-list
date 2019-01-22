@@ -1,8 +1,9 @@
 <template>
-  <div>   
+  <div>
+    <h1>TASK LIST</h1>
     <ul v-for="task in tasks" :key="task.id">
       <li>
-        {{ task.title }} - {{ task.description }}
+        <b>{{ task.title }}</b> / {{ task.description }}
       </li>
     </ul>
   </div>
@@ -35,18 +36,23 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
 ul {
-  list-style-type: none;
+  margin: 0;
   padding: 0;
+  list-style-type: none;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+ul li {
+  padding: 20px;
+  font-size: 1.3em;
+  background-color: #e0edf4;
+  margin-bottom: 2px;
+  color: #3e5252;
 }
-a {
+
+h1 {
   color: #42b983;
 }
 </style>
